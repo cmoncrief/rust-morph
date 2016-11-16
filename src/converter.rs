@@ -8,14 +8,7 @@ pub enum CapitalizeType {
     AllUppercase,
 }
 
-enum BoundaryType {
-    NoBoundary,
-    PreBoundary,
-    Boundary,
-    PostBoundary,
-}
-
-const SEPARATORS: [char; 3] = ['-', '_', ' '];
+const SEPARATORS: [char; 4] = ['-', '_', ' ', '.'];
 
 pub fn convert_case(input: String, cap_type: CapitalizeType, use_separator: bool, separator: char) -> String {
 
@@ -122,7 +115,7 @@ pub fn convert_case(input: String, cap_type: CapitalizeType, use_separator: bool
         }
 
         first_char = false;
-        last_char = if index_char.0 == (len - 3) {true} else {false};
+        last_char = if index_char.0 == (len - 2) {true} else {false};
         prev_sep = if cur_sep || is_post_boundary {true} else {false};
         prev_upper = cur_upper;
         output

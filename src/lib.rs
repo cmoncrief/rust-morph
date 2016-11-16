@@ -10,8 +10,8 @@ pub mod sentence;
 pub mod title;
 
 pub use self::snake_case::{to_snake_case, to_snake_caps};
-pub use self::kebab::{to_kebab};
-pub use self::camel::{to_camel, to_upper_camel};
+pub use self::kebab::{to_kebab_case};
+pub use self::camel::{to_camel_case, to_upper_camel_case};
 pub use self::first_case::{to_upper_first};
 pub use self::sentence::{to_sentence};
 pub use self::title::{to_title};
@@ -37,7 +37,7 @@ mod tests {
 
     #[bench]
     fn bench_dashed(b: &mut Bencher) {
-        b.iter(|| to_dashed("this is a test string"))
+        b.iter(|| to_kebab_case("this is a test string"))
     }
 
     #[bench]
@@ -47,17 +47,17 @@ mod tests {
 
     #[bench]
     fn bench_camel(b: &mut Bencher) {
-        b.iter(|| to_camel("this is a test string"))
+        b.iter(|| to_camel_case("this is a test string"))
     }
 
     #[bench]
     fn bench_upper_camel(b: &mut Bencher) {
-        b.iter(|| to_upper_camel("this is a test string"))
+        b.iter(|| to_upper_camel_case("this is a test string"))
     }
 
     #[bench]
     fn bench_human(b: &mut Bencher) {
-        b.iter(|| to_human("this is a test string"))
+        b.iter(|| to_sentence("this is a test string"))
     }
 
     #[bench]
