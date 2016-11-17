@@ -86,7 +86,7 @@ pub fn convert_case(input: String, cap_type: CapitalizeType, use_separator: bool
             },
 
             CapitalizeType::FirstLetterOfWordExceptFirst => {
-                if first_char && cur_upper && next_upper {
+                if first_char && cur_upper && next_upper && !is_all_upper {
                     index_char.1
                 } else if first_char {
                     index_char.1.to_ascii_lowercase()

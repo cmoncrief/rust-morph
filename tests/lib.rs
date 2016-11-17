@@ -121,10 +121,6 @@ fn test_kebab_case_from_kebab() {
 // Camel
 ///////////////////////////////////////////////////////////////////////////
 
-///////////////////////////////////////////////////////////////////////////
-// Dashed / Kebab
-///////////////////////////////////////////////////////////////////////////
-
 #[test]
 fn test_camel_case_from_snake() {
     assert_eq!("loremIpsumDolor", morph::to_camel_case("lorem_ipsum_dolor"))
@@ -162,4 +158,47 @@ fn test_camel_case_from_mixed() {
 #[test]
 fn test_camel_case_from_camel() {
     assert_eq!("loremIpsumDolor", morph::to_camel_case("loremIpsumDolor"))
+}
+
+///////////////////////////////////////////////////////////////////////////
+// Upper camel
+///////////////////////////////////////////////////////////////////////////
+
+#[test]
+fn test_cupper_amel_case_from_snake() {
+    assert_eq!("LoremIpsumDolor", morph::to_upper_camel_case("lorem_ipsum_dolor"))
+}
+
+#[test]
+fn test_upper_camel_case_from_snake_caps() {
+    assert_eq!("LoremIpsumDolor", morph::to_upper_camel_case("LOREM_IPSUM_DOLOR"))
+}
+
+#[test]
+fn test_upper_camel_case_from_snake_acronyms() {
+    assert_eq!("NASAAndTheJPLHaveARocket", morph::to_upper_camel_case("NASA_and_the_JPL_have_a_rocket"))
+}
+
+#[test]
+fn test_upper_camel_case_from_sentence() {
+    assert_eq!("LoremIpsumDolor", morph::to_upper_camel_case("Lorem ipsum dolor"))
+}
+#[test]
+fn test_upper_camel_case_from_dotted() {
+    assert_eq!("LoremIpsumDolor", morph::to_upper_camel_case("lorem.ipsum.dolor"))
+}
+
+#[test]
+fn test_upper_camel_case_from_dashed() {
+    assert_eq!("LoremIpsumDolor", morph::to_upper_camel_case("lorem-ipsum-dolor"))
+}
+
+#[test]
+fn test_upper_camel_case_from_mixed() {
+    assert_eq!("LoremIpsumDolorSitAmet", morph::to_upper_camel_case("Lorem.ipsum-DolorSit_amet"))
+}
+
+#[test]
+fn test_upper_camel_case_from_camel() {
+    assert_eq!("LoremIpsumDolor", morph::to_upper_camel_case("loremIpsumDolor"))
 }
