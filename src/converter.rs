@@ -68,7 +68,9 @@ pub fn convert_case(input: String, cap_type: CapitalizeType, use_separator: bool
                     index_char.1.to_ascii_uppercase()
                 } else if is_all_upper {
                     index_char.1.to_ascii_lowercase()
-                } else if cur_upper && (is_pre_boundary || is_post_boundary) {
+                } else if cur_upper && is_pre_boundary {
+                    let c = output.pop().unwrap();
+                    output.push(c.to_ascii_lowercase());
                     index_char.1.to_ascii_lowercase()
                 } else if cur_upper && (prev_upper || next_upper) {
                     index_char.1
