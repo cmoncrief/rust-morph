@@ -9,6 +9,7 @@ pub enum CapitalizeType {
 }
 
 const SEPARATORS: [char; 4] = ['-', '_', ' ', '.'];
+const ONE_LETTER_WORDS: [char; 2] = ['A', 'I'];
 
 pub fn convert_case(input: String, cap_type: CapitalizeType, use_separator: bool, separator: char) -> String {
 
@@ -38,8 +39,6 @@ pub fn convert_case(input: String, cap_type: CapitalizeType, use_separator: bool
             next_sep = false;
         }
 
-        // println!("current: {} cur_upper: {} next_upper: {} prev_upper: {} last_char: {} index: {}",
-        //          index_char.1, cur_upper, next_upper, prev_upper, last_char, index_char.0);
 
         if last_char {
             is_post_boundary = false;
@@ -56,6 +55,9 @@ pub fn convert_case(input: String, cap_type: CapitalizeType, use_separator: bool
             is_pre_boundary = false;
             is_boundary = false;
         }
+        //
+        // println!("current: {} cur_upper: {} next_upper: {} prev_upper: {} last_char: {} index: {}, boundary: {}, pre_bounday: {}, post_boundary: {}",
+        //          index_char.1, cur_upper, next_upper, prev_upper, last_char, index_char.0, is_boundary, is_pre_boundary, is_post_boundary);
 
         let new_char = match cap_type {
             CapitalizeType::AllLowercase => index_char.1.to_ascii_lowercase(),
@@ -65,6 +67,8 @@ pub fn convert_case(input: String, cap_type: CapitalizeType, use_separator: bool
                 if first_char {
                     index_char.1.to_ascii_uppercase()
                 } else if is_all_upper {
+                    index_char.1.to_ascii_lowercase()
+                } else if cur_upper && (is_pre_boundary || is_post_boundary) {
                     index_char.1.to_ascii_lowercase()
                 } else if cur_upper && (prev_upper || next_upper) {
                     index_char.1
