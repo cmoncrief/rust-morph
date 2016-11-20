@@ -39,7 +39,6 @@ pub fn convert_case(input: String, cap_type: CapitalizeType, use_separator: bool
             next_sep = false;
         }
 
-
         if last_char {
             is_post_boundary = false;
             is_pre_boundary = false;
@@ -69,8 +68,13 @@ pub fn convert_case(input: String, cap_type: CapitalizeType, use_separator: bool
                 } else if is_all_upper {
                     index_char.1.to_ascii_lowercase()
                 } else if cur_upper && is_pre_boundary {
-                    let c = output.pop().unwrap();
-                    output.push(c.to_ascii_lowercase());
+
+                    if index_char.0 > 1 && ONE_LETTER_WORDS.contains(&char_ref[index_char.0 - 1]) {
+                        if index_char.0 > 3 && output.chars().nth(output.len() - 2).unwrap() == ' ' {
+                            let c = output.pop().unwrap();
+                            output.push(c.to_ascii_lowercase());
+                        }
+                    }
                     index_char.1.to_ascii_lowercase()
                 } else if cur_upper && (prev_upper || next_upper) {
                     index_char.1
