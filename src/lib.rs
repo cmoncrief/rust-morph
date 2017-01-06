@@ -1,6 +1,6 @@
-//! # Morph
+//! # string_morph
 //!
-//! Morph is a fast, accurate library for string case transformations. It exposes
+//! string_morph is a fast, accurate library for string case transformations. It exposes
 //! both functions as well as traits for `String` and `str`.
 //!
 //! ```
