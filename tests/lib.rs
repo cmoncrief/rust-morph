@@ -161,46 +161,46 @@ fn test_camel_case_from_camel() {
 }
 
 ///////////////////////////////////////////////////////////////////////////
-// Upper camel
+// Pascal
 ///////////////////////////////////////////////////////////////////////////
 
 #[test]
-fn test_upper_camel_case_from_snake() {
-    assert_eq!("LoremIpsumDolor", morph::to_upper_camel_case("lorem_ipsum_dolor"))
+fn test_pascal_case_from_snake() {
+    assert_eq!("LoremIpsumDolor", morph::to_pascal_case("lorem_ipsum_dolor"))
 }
 
 #[test]
-fn test_upper_camel_case_from_snake_caps() {
-    assert_eq!("LoremIpsumDolor", morph::to_upper_camel_case("LOREM_IPSUM_DOLOR"))
+fn test_pascal_case_from_snake_caps() {
+    assert_eq!("LoremIpsumDolor", morph::to_pascal_case("LOREM_IPSUM_DOLOR"))
 }
 
 #[test]
-fn test_upper_camel_case_from_snake_acronyms() {
-    assert_eq!("NASAAndTheJPLHaveARocket", morph::to_upper_camel_case("NASA_and_the_JPL_have_a_rocket"))
+fn test_pascal_case_from_snake_acronyms() {
+    assert_eq!("NASAAndTheJPLHaveARocket", morph::to_pascal_case("NASA_and_the_JPL_have_a_rocket"))
 }
 
 #[test]
-fn test_upper_camel_case_from_sentence() {
-    assert_eq!("LoremIpsumDolor", morph::to_upper_camel_case("Lorem ipsum dolor"))
+fn test_pascal_case_from_sentence() {
+    assert_eq!("LoremIpsumDolor", morph::to_pascal_case("Lorem ipsum dolor"))
 }
 #[test]
-fn test_upper_camel_case_from_dotted() {
-    assert_eq!("LoremIpsumDolor", morph::to_upper_camel_case("lorem.ipsum.dolor"))
-}
-
-#[test]
-fn test_upper_camel_case_from_dashed() {
-    assert_eq!("LoremIpsumDolor", morph::to_upper_camel_case("lorem-ipsum-dolor"))
+fn test_pascal_ase_from_dotted() {
+    assert_eq!("LoremIpsumDolor", morph::to_pascal_case("lorem.ipsum.dolor"))
 }
 
 #[test]
-fn test_upper_camel_case_from_mixed() {
-    assert_eq!("LoremIpsumDolorSitAmet", morph::to_upper_camel_case("Lorem.ipsum-DolorSit_amet"))
+fn test_pascal_case_from_dashed() {
+    assert_eq!("LoremIpsumDolor", morph::to_pascal_case("lorem-ipsum-dolor"))
 }
 
 #[test]
-fn test_upper_camel_case_from_camel() {
-    assert_eq!("LoremIpsumDolor", morph::to_upper_camel_case("loremIpsumDolor"))
+fn test_pascal_case_from_mixed() {
+    assert_eq!("LoremIpsumDolorSitAmet", morph::to_pascal_case("Lorem.ipsum-DolorSit_amet"))
+}
+
+#[test]
+fn test_pascal_case_from_camel() {
+    assert_eq!("LoremIpsumDolor", morph::to_pascal_case("loremIpsumDolor"))
 }
 
 ///////////////////////////////////////////////////////////////////////////
