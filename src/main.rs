@@ -2,8 +2,6 @@ extern crate morph;
 
 use morph::Morph;
 
-// use morph::snake_case;
-
 fn main() {
 
     let test_string = "NASAAndTheJPLHaveARocket";
