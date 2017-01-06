@@ -39,7 +39,7 @@ Morph is a Rust library for string case transformations. It has an emphasis on a
       assert_eq!("Test", "test".to_upper_first());
 
 
-  # Benchmarks
+# Benchmarks
 
     running 8 tests
     test bench_camel      ... bench:         538 ns/iter (+/- 28)
