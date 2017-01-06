@@ -1,6 +1,7 @@
 # string_morph
 
-string_morph is a Rust library for string case transformations. It has an emphasis on accuracy and speed, in that order. The case conversions are available as functions as well as traits on String types.
+string_morph is a Rust library of string case transformations with an emphasis on accuracy and performance. The case conversions are available as functions as well as traits on String types.
+
 
 # Examples
 

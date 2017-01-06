@@ -2,7 +2,7 @@
 name = "string_morph"
 version = "0.1.0"
 authors = ["Charles Moncrief <cmoncrief@gmail.com>"]
-description = "string_morph is a Rust library for string case transformations with an emphasis on accuracy and performance. The case conversions are available as functions as well as traits on String types."
+description = "string_morph is a library of string case transformations with an emphasis on accuracy and performance. The case conversions are available as functions as well as traits on String types."
 repository = "https://github.com/cmoncrief/rust-morph"
 documentation = "https://docs.rs/string_morph"
 readme = "README.md"

@@ -1,7 +1,6 @@
 //! # string_morph
 //!
-//! string_morph is a fast, accurate library for string case transformations. It exposes
-//! both functions as well as traits for `String` and `str`.
+//! string_morph is a library of string case transformations with an emphasis on accuracy and performance. The case conversions are available as functions as well as traits on String types.
 //!
 //! ```
 //! use string_morph::Morph;

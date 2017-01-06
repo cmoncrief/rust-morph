@@ -1,5 +1,5 @@
 #![feature(test)]
-extern crate morph;
+extern crate string_morph;
 extern crate test;
 use test::Bencher;
 
