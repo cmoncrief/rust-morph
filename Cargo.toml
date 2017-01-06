@@ -6,7 +6,7 @@ description = "string_morph is a library of string case transformations with an 
 repository = "https://github.com/cmoncrief/rust-morph"
 documentation = "https://docs.rs/string_morph"
 readme = "README.md"
-keywords = ["string", "inflect", "camel", "pascal", "snake", "kebab", "case", "morph"]
+keywords = ["string", "inflect", "camel", "snake", "case"]
 license = "MIT"
 
 [dependencies]
