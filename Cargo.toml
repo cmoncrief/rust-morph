@@ -1,0 +1,6 @@
+[package]
+name = "morph"
+version = "0.1.0"
+authors = ["Charles Moncrief <cmoncrief@gmail.com>"]
+
+[dependencies]
