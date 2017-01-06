@@ -1,1 +1,0 @@
-initSidebarItems({"fn":[["to_sentence_case","Convert a string to a human sentence cased string"]]});

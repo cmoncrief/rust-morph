@@ -1,1 +1,0 @@
-initSidebarItems({"fn":[["to_snake_caps_case","Convert a string to an uppercase snake cased string"],["to_snake_case","Convert a string to a snake cased string"]]});

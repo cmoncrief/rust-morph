@@ -1,1 +1,0 @@
-initSidebarItems({"mod":[["camel_case",""],["kebab_case",""],["pascal_case",""],["sentence_case",""],["snake_case",""],["title_case",""],["upper_first",""]],"trait":[["Morph",""]]});
