@@ -5,7 +5,7 @@ use converter::{convert_case, CapitalizeType};
 /// # Examples
 ///
 /// ```
-/// assert_eq!("lorem_ipsum_dolor", morph::to_snake_case("Lorem ipsum dolor"))
+/// assert_eq!("lorem_ipsum_dolor", string_morph::to_snake_case("Lorem ipsum dolor"))
 /// ```
 
 pub fn to_snake_case(input: &str) -> String {
@@ -17,7 +17,7 @@ pub fn to_snake_case(input: &str) -> String {
 /// # Examples
 ///
 /// ```
-/// assert_eq!("LOREM_IPSUM_DOLOR", morph::to_snake_caps_case("Lorem ipsum dolor"))
+/// assert_eq!("LOREM_IPSUM_DOLOR", string_morph::to_snake_caps_case("Lorem ipsum dolor"))
 /// ```
 
 pub fn to_snake_caps_case(input: &str) -> String {
