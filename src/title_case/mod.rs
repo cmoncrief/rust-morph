@@ -5,7 +5,7 @@ use converter::{convert_case, CapitalizeType};
 /// # Examples
 ///
 /// ```
-/// assert_eq!("Lorem Ipsum Dolor", morph::to_title_case("lorem-ipsum-dolor"))
+/// assert_eq!("Lorem Ipsum Dolor", string_morph::to_title_case("lorem-ipsum-dolor"))
 /// ```
 
 pub fn to_title_case(input: &str) -> String {

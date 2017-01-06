@@ -1,41 +1,40 @@
-//! # Morph
+//! # string_morph
 //!
-//! Morph is a fast, accurate library for string case transformations. It exposes
-//! both functions as well as traits for `String` and `str`.
+//! string_morph is a library of string case transformations with an emphasis on accuracy and performance. The case conversions are available as functions as well as traits on String types.
 //!
 //! ```
-//! use morph::Morph;
+//! use string_morph::Morph;
 //!
 //! // Camel case
-//! assert_eq!("loremIpsumDolor", morph::to_camel_case("lorem_ipsum_dolor"));
+//! assert_eq!("loremIpsumDolor", string_morph::to_camel_case("lorem_ipsum_dolor"));
 //! assert_eq!("loremIpsumDolor", "lorem_ipsum_dolor".to_camel_case());
 //!
 //! // Pascal case
-//! assert_eq!("LoremIpsumDolor", morph::to_pascal_case("lorem_ipsum_dolor"));
+//! assert_eq!("LoremIpsumDolor", string_morph::to_pascal_case("lorem_ipsum_dolor"));
 //! assert_eq!("LoremIpsumDolor", "lorem_ipsum_dolor".to_pascal_case());
 //!
 //! // Kebab case
-//! assert_eq!("lorem-ipsum-dolor", morph::to_kebab_case("lorem_ipsum_dolor"));
+//! assert_eq!("lorem-ipsum-dolor", string_morph::to_kebab_case("lorem_ipsum_dolor"));
 //! assert_eq!("lorem-ipsum-dolor", "lorem_ipsum_dolor".to_kebab_case());
 //!
 //! // Sentence case
-//! assert_eq!("Lorem ipsum dolor", morph::to_sentence_case("lorem_ipsum_dolor"));
+//! assert_eq!("Lorem ipsum dolor", string_morph::to_sentence_case("lorem_ipsum_dolor"));
 //! assert_eq!("Lorem ipsum dolor", "lorem_ipsum_dolor".to_sentence_case());
 //!
 //! // Snake case
-//! assert_eq!("lorem_ipsum_dolor", morph::to_snake_case("Lorem ipsum dolor"));
+//! assert_eq!("lorem_ipsum_dolor", string_morph::to_snake_case("Lorem ipsum dolor"));
 //! assert_eq!("lorem_ipsum_dolor", "Lorem ipsum dolor".to_snake_case());
 //!
 //! // Upper snake case
-//! assert_eq!("LOREM_IPSUM_DOLOR", morph::to_snake_caps_case("Lorem ipsum dolor"));
+//! assert_eq!("LOREM_IPSUM_DOLOR", string_morph::to_snake_caps_case("Lorem ipsum dolor"));
 //! assert_eq!("LOREM_IPSUM_DOLOR", "Lorem ipsum dolor".to_snake_caps_case());
 //!
 //! // Title case
-//! assert_eq!("Lorem Ipsum Dolor", morph::to_title_case("lorem-ipsum-dolor"));
+//! assert_eq!("Lorem Ipsum Dolor", string_morph::to_title_case("lorem-ipsum-dolor"));
 //! assert_eq!("Lorem Ipsum Dolor", "lorem-ipsum-dolor".to_title_case());
 //!
 //! // Upper first
-//! assert_eq!("Test", morph::to_upper_first("test"));
+//! assert_eq!("Test", string_morph::to_upper_first("test"));
 //! assert_eq!("Test", "test".to_upper_first());
 //!
 //! ```

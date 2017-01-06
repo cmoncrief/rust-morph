@@ -5,7 +5,7 @@ use converter::{convert_case, CapitalizeType};
 /// # Examples
 ///
 /// ```
-/// assert_eq!("LoremIpsumDolor", morph::to_pascal_case("lorem_ipsum_dolor"))
+/// assert_eq!("LoremIpsumDolor", string_morph::to_pascal_case("lorem_ipsum_dolor"))
 /// ```
 
 pub fn to_pascal_case(input: &str) -> String {
